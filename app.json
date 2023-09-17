@@ -1,0 +1,81 @@
+{
+  "expo": {
+    "name": "ArepaTypes",
+    "slug": "ArepaTypes",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "custom photos permission",
+          "cameraPermission": "Allow $(PRODUCT_NAME) to open the camera",
+          "//": "Disables the microphone permission",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./local/assets/notification-icon.png",
+          "color": "#ffffff",
+          "sounds": [
+            "./local/assets/notification-sound.wav",
+            "./local/assets/notification-sound-other.wav"
+          ]
+        }
+      ]
+    ],
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.optic.arepatypes",
+      "config": {
+        "googleMapsApiKey": "AIzaSyCgaqq3_72_g_Sr-PPUwzVjxOK5HDAKlK4"
+      },
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.optic.arepatypes",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCgaqq3_72_g_Sr-PPUwzVjxOK5HDAKlK4"
+        }
+      },
+      "permission": [
+        "ACCESS_BACKGROUND_LOCATION",
+        "locationAlwaysAndWhenInUsePermission",
+        "locationAlwaysPermission",
+        "locationWhenInUsePermission",
+        "isIosBackgroundLocationEnabled",
+        "isAndroidBackgroundLocationEnabled"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "320ad6e1-832f-47a2-a33a-fe4fea9dcf05"
+      }
+    }
+  }
+}
