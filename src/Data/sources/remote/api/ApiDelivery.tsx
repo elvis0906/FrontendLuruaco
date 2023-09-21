@@ -3,14 +3,14 @@ import { LocalStorage } from '../../local/LocalStorage';
 import { User } from '../../../../Domain/entities/User';
 
 const ApiDelivery = axios.create({
-    baseURL: 'http://172.23.41.122:3000/api',
+    baseURL: 'https://luruacoapp-production.up.railway.app/api',
     headers: {
         'Content-type': 'application/json'
     }
 })
 
 const ApiDeliveryForImage = axios.create({
-    baseURL: 'http://172.23.41.122:3000/api',
+    baseURL: 'https://luruacoapp-production.up.railway.app/api',
     headers: {
         'Content-type': 'multipart/form-data',
         'accept': 'application/json',
